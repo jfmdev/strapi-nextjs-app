@@ -15,12 +15,12 @@ The backend code is on the `/back` folder and is implemented using [Strapi](http
 
 ### Running locally
 
-To run the backend you can use the `start` command from Strapi:
+To run the backend you can use the `dev` command from Strapi:
 
 ```bash
-cd back/app
-npm install   # Run only once to install dependencies
-npm run start
+cd back
+npm install   # Run only once to install dependencies.
+npm run dev
 ```
 
 > For additional commands and environment configuration, refer to the [Strapi CLI documentation](https://docs.strapi.io/dev-docs/cli).
@@ -28,8 +28,7 @@ npm run start
 Alternatively you can also run the backend using Docker:
 
 ```bash
-cd /back
-docker build -t my-strapi-back . # Note you only need to build the image once.
+docker build -f Dockerfile.back -t my-strapi-back . # Note you only need to build the image once.
 docker run -p 1337:1337 my-strapi-back
 ```
 
@@ -44,6 +43,3 @@ This project uses **SQLite** with some sample data preloaded.
 
 > In production, it's recommended to use a more robust database like **PostgreSQL**, **MariaDB**, or **MySQL**, and populate data using SQL dumps or Strapi’s import tools.
 
-## Frontend
-
-TODO

@@ -6,14 +6,14 @@ ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /opt/
-COPY ./app/package.json ./app/package-lock.json ./
+COPY ./back/package.json ./back/package-lock.json ./
 RUN npm install -g node-gyp
 RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install
 ENV PATH=/opt/node_modules/.bin:$PATH
 
-WORKDIR /opt/app
-COPY ./app .
-RUN chown -R node:node /opt/app
+WORKDIR /opt/back
+COPY ./back .
+RUN chown -R node:node /opt/back
 USER node
 RUN ["npm", "run", "build"]
 EXPOSE 1337
