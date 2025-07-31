@@ -43,3 +43,29 @@ This project uses **SQLite** with some sample data preloaded.
 
 > In production, it's recommended to use a more robust database like **PostgreSQL**, **MariaDB**, or **MySQL**, and populate data using SQL dumps or Strapi’s import tools.
 
+## Frontend
+
+The backend code is on the `/front` folder and is implemented using [Next.js](https://nextjs.org/).
+
+### Running locally
+
+To run the backend you can use the `dev` command from Next.js:
+
+```bash
+cd front
+npm install   # Run only once to install dependencies
+npm run dev
+```
+
+> For additional commands, refer to the [Next.js CLI documentation](https://nextjs.org/docs/pages/api-reference/cli/next#commands).
+
+Alternatively you can also run the frontend using Docker:
+
+```bash
+docker build -f Dockerfile.front -t my-next-front . # Note you only need to build the image once.
+docker run -p 3000:3000 my-next-front
+```
+
+> Feel free to replace `my-next-front` with any name you prefer.
+
+The frontend will be available at [http://localhost:3000](http://localhost:3000).  
