@@ -24,3 +24,75 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.markdown-content {
+  /* Body text */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+
+  /* Headings */
+  h1 {
+    color: #2c3e50;
+    font-size: 2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.3em;
+  }
+
+  h2 {
+    color: #34495e;
+    font-size: 1.5em;
+  }
+
+  /* Paragraphs */
+  p {
+    margin-bottom: 1em;
+  }
+
+  /* Bold and Italic text */
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  /* Lists */
+  ul, ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+  }
+
+  /* Links */
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Code blocks and inline code */
+  pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: "Courier New", monospace;
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 10px;
+    color: #666;
+    font-style: italic;
+  }  
+}

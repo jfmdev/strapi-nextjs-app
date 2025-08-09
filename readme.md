@@ -45,11 +45,14 @@ This project uses **SQLite** with some sample data preloaded.
 
 ## Frontend
 
-The backend code is on the `/front` folder and is implemented using [Next.js](https://nextjs.org/).
+The frontend code is on the `/front` folder and is implemented using [Next.js](https://nextjs.org/).
 
 ### Running locally
 
-To run the backend you can use the `dev` command from Next.js:
+To run the frontend, you first need to create a `.env` file in the `/front` directory.  
+This file should specify the URL where the backend is running and provide an access token (which can be obtained from the Strapi administration panel).
+
+After setting up the `.env` file, you can start the frontend using the Next.js `dev` command:
 
 ```bash
 cd front
