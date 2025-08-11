@@ -48,7 +48,6 @@ export async function getBlogEntries() {
   if (!res.ok) throw new Error("Failed to fetch blog entries");
   
   const data = await res.json();
-console.log('blog-entries',data)
   return data.data as BlogEntry[];
 }
 
